@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="whatsapp" unicode="&#xe800;" d="M710 560c-56 56-130 87-209 87-163 0-295-133-295-295 0-52 13-103 39-148l-42-153 157 41c43-23 91-36 141-36l0 0c163 0 298 133 298 295 0 79-33 153-89 209z m-209-454c-44 0-87 12-125 34l-9 5-93-24 25 91-6 9c-25 39-37 84-37 131 0 135 110 245 245 245 66 0 127-26 174-72 46-46 74-108 74-174 0-135-113-245-248-245z m135 184c-8 3-44 21-51 24-7 2-11 3-16-4-5-7-19-24-24-29-4-5-8-6-16-2-43 22-72 39-100 88-8 13 7 12 21 40 3 5 2 9 0 13-2 4-17 40-23 55-6 14-12 12-17 13-4 0-9 0-14 0-5 0-13-2-19-9-7-8-26-26-26-62 0-36 26-71 30-76 4-5 52-80 126-112 47-20 65-22 89-18 14 2 43 18 49 35 6 17 6 32 5 35-2 3-7 5-14 9z" horiz-adv-x="1000" />
+
+<glyph glyph-name="messenger" unicode="&#xe801;" d="M501 647c-163 0-295-123-295-276 0-86 42-163 108-213l0-106 99 56c28-8 57-12 88-12 163 0 295 123 295 275 0 153-132 276-295 276z m30-369l-76 80-145-80 159 169 77-78 143 78-158-169z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

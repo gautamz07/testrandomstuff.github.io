@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test Stuff - Edited the title</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="fonts.css">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul > li {
+            display: inline-block;
+            background: #eee;
+            color: skyblue;
+            padding: 0.35rem 0.5rem;
+            font-size: 2rem;
+        }
+    </style>
+
 </head>
 <body>
-   
-    <a href="" id="msger">Messenger Button</a>
+    
+
+    <ul>
+        <li><i class="iko iko-whatsapp"></i></li>
+        <li><i class="iko iko-messenger"></i></li>
+        <!-- <li><i class="ico ico-twitter"></i></li>
+        <li><i class="ico ico-video"></i></li>
+        <li><i class="ico ico-whatsapp"></i></li> -->
+    </ul>
 
     <script>
         
-        document.getElementById('msger').addEventListener('click' , (e) => {
-            e.preventDefault();
-            // alert();
-            window.open('fb-messenger://share?link=' + encodeURIComponent( location.protocol + '//' + location.host + location.pathname ) + encodeURIComponent('?utm_source=facebook&utm_medium=gautam619') + encodeURIComponent('\n\n Check out this product its awesome'),
-      'Messenger', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600')
-        });
-
     </script>
 
 </body>

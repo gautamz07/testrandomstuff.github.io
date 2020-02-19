@@ -1,0 +1,32 @@
+@font-face {
+	font-family:"fontello";
+	src: url("./fonts/ikons.eot");
+	src: url("./fonts/ikons.eot?#iefix") format("embedded-opentype");
+	src: url("./fonts/ikons.woff") format("woff");
+	src: url("./fonts/ikons.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+
+[class^="iko-"]:before,
+[class*=" iko-"]:before {
+	font-family:"fontello";
+	display:inline-block;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+.iko-whatsapp:before {
+	content:"\e800";
+}
+
+.iko-messenger:before {
+	content:"\e8c3";
+}
