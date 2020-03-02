@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Stuff - Chipboard</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="fonts.css">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul > li {
+            display: inline-block;
+            background: #eee;
+            color: skyblue;
+            padding: 0.35rem 0.5rem;
+            font-size: 2rem;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <a href="#" id="anc_1">I am lailai</a>
+    <a href="#" id="anc_2">I am bob</a>
+
+    <script>
+        setTimeout(function(){
+            document.getElementById('anc_1').addEventListener('click', function(e){
+                e.preventDefault();
+                // alert('LOL !!');
+                let text = this.innerHTML;
+                navigator.clipboard.writeText( text )
+                    .then( () => console.log('COPIED') )
+            });
+
+            document.getElementById('anc_2').addEventListener('click', function(e){
+                e.preventDefault();
+                // console.log('LOL !!');
+                let text = this.innerHTML;
+                navigator.clipboard.writeText( text )
+                    .then( () => console.log('COPIED') )
+            });
+        }, 2000);
+    </script>
+
+</body>
+</html>
