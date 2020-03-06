@@ -41,7 +41,7 @@
     <script>
 
 
-const someContent = encodeURIComponent(`Dragonball Sports shoe - New Product at Harry's Cafe\n
+const someContent = `Dragonball Sports shoe - New Product at Harry's Cafe
 --
 Size: L
 Color: Grey
@@ -51,7 +51,7 @@ Subtotal: INR 5000.00
 Taxes: INR 500.00
 Total: INR 5500.00
 --
-https://pmny.in/lIEnqtQ56Wp1`)
+https://pmny.in/lIEnqtQ56Wp1`
 
 
 
@@ -66,24 +66,13 @@ https://pmny.in/lIEnqtQ56Wp1`)
                         title: 'Buy product at shopmatic',
                         text: someContent,
                         url: 'https://pmny.in/lIEnqtQ56Wp1',
-                        // title: templates.email.subject(merchantDomain),
-                        // text: templates.email.body(merchantDomain),
-                        // url: merchantDomain,
                     })
                     .then(() => console.log('Successful share'))
                 } else {
                     const windowOptions = 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'
-                    window.open(`https://www.facebook.com/sharer/sharer.php?t=${someContent}`, 'Facebook', windowOptions)
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${someContent}`, 'Facebook', windowOptions)
                 }
 
-            });
-
-            document.getElementById('anc_2').addEventListener('click', function(e){
-                e.preventDefault();
-                // console.log('LOL !!');
-                let text = this.innerHTML;
-                navigator.clipboard.writeText( text )
-                    .then( () => console.log('COPIED') )
             });
         }, 2000);
     </script>
