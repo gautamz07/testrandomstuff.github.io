@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <meta content="website" property="og:type" />
+    <meta content="https://gautamz07.github.io/testrandomstuff.github.io/" property="og:url" />
+    <meta content="pay g " property="og:title" />
+    <!-- <meta content="https://d2y16r5m9dfvn.cloudfront.net/images/Y56PQM/rMoB51Z1r6.jpg" property="og:image" /> -->
+    <!-- <meta content="https://d2y16r5m9dfvn.cloudfront.net/images/Y56PQM/rMoB51Z1r6.jpg" property="og:image" /> -->
+    <meta content="https://gautamz07.github.io/testrandomstuff.github.io/images/rMoB51Z1r6.jpg" property="og:image" />
+    <meta content="https://gautamz07.github.io/testrandomstuff.github.io/images/rMoB51Z1r6.jpg" property="og:image" />
+
+    <meta content="This is the description that is here" property="og:description" />
+    <meta content="nananap" property="og:site_name" />
+
+
+    <!-- <meta content="http://nananap.myshopmatic.test/products/pay-g" itemprop="name" />
+    <meta content="" itemprop="description" />
+    <meta content="default" itemprop="image" /> -->
+
+    <!-- <meta content="https://gautamz07.github.io/testrandomstuff.github.io/images/rMoB51Z1r6.jpg" itemprop="image" property="og:image:secure_url" />
+    <meta content="256" property="og:image:width" />
+    <meta content="256" property="og:image:height" /> -->
+
+
+</head>
+
+<body>
+
+
+    <a href="#" id="sharewhatsapp">
+        share on whatsapp
+    </a>
+
+
+    <script>
+
+        const purchaseTitle = 'complete your purchase for goshopmatic.com'
+
+        const sC = link => `Dragonball Sports shoe - New Product at Harry's Cafe\n
+        --
+        Size: L
+        Color: Grey
+        Quantity: 1
+        --
+        Subtotal: INR 5000.00
+        Taxes: INR 500.00
+        Total: INR 5500.00
+        --
+        ${link}`
+
+        // async function AndroidNativeShare(Title, URL, Description) {
+        //     if (typeof navigator.share === 'undefined' || !navigator.share) {
+        //         alert('Your browser does not support Android Native Share');
+        //     } else {
+        //         const TitleConst = Title;
+        //         const URLConst = URL;
+        //         const DescriptionConst = Description;
+
+        //         try {
+        //             await navigator.share({ title: TitleConst, text: DescriptionConst, url: URLConst });
+        //         } catch (error) {
+        //             console.log('Error sharing: ' + error);
+        //             return;
+        //         }
+        //     }
+        // }
+
+        document.getElementById('sharewhatsapp').addEventListener('click', function (e) {
+            navigator
+                .share({
+                title: purchaseTitle,
+                text: sC('payu/516hhsgs6&yuua.com'),
+                url: 'payu/516hhsgs6&yuua.com',
+            })
+            .then(() => console.log('Successful share'))
+
+        });
+
+    </script>
+
+</body>
+
+</html>
