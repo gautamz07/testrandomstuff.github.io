@@ -37,6 +37,7 @@
         share on whatsapp
     </a>
 
+    <image id="image" src='images/rMoB51Z1r6.jpg' />
 
     <script>
 
@@ -73,12 +74,35 @@ ${link}
         //     }
         // }
 
+        setTimeout( () => {
+            var image = document.getElementById('image')
+            var canvas = document.createElement('canvas');
+            canvas.width = image.width;
+            canvas.height = image.height;
+            canvas.getContext('2d').drawImage(image, 0, 0);
+
+            c.toBlob(function(blob) { // get content as JPEG blob
+                
+                navigator
+                .share({
+                    title: purchaseTitle,
+                    text: sC('payu/516hhsgs6&yuua.com'),
+                    url: 'payu/516hhsgs6&yuua.com',
+                    file: blob
+                })
+                .then(() => console.log('Successful share'))
+
+            }, "image/jpeg", 0.75);
+
+        } , 2000);
+
         document.getElementById('sharewhatsapp').addEventListener('click', function (e) {
             navigator
                 .share({
                 title: purchaseTitle,
                 text: sC('payu/516hhsgs6&yuua.com'),
                 url: 'payu/516hhsgs6&yuua.com',
+                file: 
             })
             .then(() => console.log('Successful share'))
 
