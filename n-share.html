@@ -96,7 +96,7 @@ ${link}
                 canvas.height = image.height;
                 canvas.getContext('2d').drawImage(image, 0, 0);
 
-                c.toBlob(function(blob) { // get content as JPEG blob
+                canvas.toBlob(function(blob) { // get content as JPEG blob
                     
                     navigator.share({
                         title: purchaseTitle,
