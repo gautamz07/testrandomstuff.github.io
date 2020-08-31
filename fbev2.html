@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FBE V2 integartion.</title>
+</head>
+<body>
+  <button onclick="launchFBE()"> Launch FBE Workflow </button>
+</body>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script>
+  window.fbAsyncInit = function() {
+  //2. FB JavaScript SDK configuration and setup
+      FB.init({
+          appId      : '352427434946910', // FB App ID
+          cookie     : true,  // enable cookies to allow the server to access the session
+          xfbml      : true,  // parse social plugins on this page
+          version    : 'v4.0' // uses graph api version v4.0
+      });
+  };
+
+  //1. Load the JavaScript SDK asynchronously
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+   //3. Facebook login with JavaScript SDK
+  function launchFBE() {
+      FB.login(function (response) {
+          if (response.authResponse) {
+              // returns a User Access Token with scopes requested
+              const accessToken = response.authResponse.accessToken;
+              const message = {
+                  'success':true,
+                  'access_token':accessToken,
+              };
+              // store access token for later  
+          } else {
+            console.log('User cancelled login or did not fully authorize.');
+          }
+      }, {
+          scope: 'catalog_management,manage_business_extension',
+        // refer to the extras object table for details
+          extras: {
+              "setup":{
+                "external_business_id":"<external_business_id>",
+                "timezone":"America\/Los_Angeles",
+                "currency":"USD",
+                "business_vertical":"ECOMMERCE"
+              },
+              "business_config":{
+                "business":{
+                   "name":"<business_name>"
+                }
+              },
+              "repeat":false
+          }
+      });
+  }
+</script>
+
+</html>
